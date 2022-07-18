@@ -124,7 +124,7 @@
       <!-- end navbar 2 -->
     </div>
 
-    <div class="content-body" style="height: 150px; margin-top: 150px; background-color: #dfe7fd">
+    <div class="content-body" style="height: 150px; margin-top: 150px; background-color: #e2eeff">
       <div class="container">
         <div class="row text-center">
           <p style="font-size: 20pt">LEMBAGA LAYANAN PENDIDIKAN TINGGI <b>WILAYAH 4</b></p>
@@ -328,46 +328,46 @@
 
     <!-- custom js -->
     <script>
-      document.addEventListener("DOMContentLoaded", function () {
+      document.addEventListener('DOMContentLoaded', function () {
         // make it as accordion for smaller screens
         if (window.innerWidth > 992) {
-          document.querySelectorAll(".navbar .nav-item").forEach(function (everyitem) {
-            everyitem.addEventListener("mouseover", function (e) {
-              let el_link = this.querySelector("a[data-bs-toggle]");
+          document.querySelectorAll('.navbar .nav-item').forEach(function (everyitem) {
+            everyitem.addEventListener('mouseover', function (e) {
+              let el_link = this.querySelector('a[data-bs-toggle]');
 
               if (el_link != null) {
                 let nextEl = el_link.nextElementSibling;
-                el_link.classList.add("show");
-                nextEl.classList.add("show");
+                el_link.classList.add('show');
+                nextEl.classList.add('show');
               }
             });
-            everyitem.addEventListener("mouseleave", function (e) {
-              let el_link = this.querySelector("a[data-bs-toggle]");
+            everyitem.addEventListener('mouseleave', function (e) {
+              let el_link = this.querySelector('a[data-bs-toggle]');
 
               if (el_link != null) {
                 let nextEl = el_link.nextElementSibling;
-                el_link.classList.remove("show");
-                nextEl.classList.remove("show");
+                el_link.classList.remove('show');
+                nextEl.classList.remove('show');
               }
             });
           });
-          document.querySelectorAll(".navbar .dropdown-item").forEach(function (everyitem) {
-            everyitem.addEventListener("mouseover", function (e) {
-              let el_link = this.querySelector("a[data-bs-toggle]");
+          document.querySelectorAll('.navbar .dropdown-item').forEach(function (everyitem) {
+            everyitem.addEventListener('mouseover', function (e) {
+              let el_link = this.querySelector('a[data-bs-toggle]');
 
               if (el_link != null) {
                 let nextEl = el_link.nextElementSibling;
-                el_link.classList.add("show");
-                nextEl.classList.add("show");
+                el_link.classList.add('show');
+                nextEl.classList.add('show');
               }
             });
-            everyitem.addEventListener("mouseleave", function (e) {
-              let el_link = this.querySelector("a[data-bs-toggle]");
+            everyitem.addEventListener('mouseleave', function (e) {
+              let el_link = this.querySelector('a[data-bs-toggle]');
 
               if (el_link != null) {
                 let nextEl = el_link.nextElementSibling;
-                el_link.classList.remove("show");
-                nextEl.classList.remove("show");
+                el_link.classList.remove('show');
+                nextEl.classList.remove('show');
               }
             });
           });
