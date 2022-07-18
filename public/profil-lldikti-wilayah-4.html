@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous" />
+
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/9.9.0/firebase-app-compat.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/9.9.0/firebase-auth-compat.js"></script>
+    <script defer src="/__/firebase/9.9.0/firebase-database-compat.js"></script>
+    <script defer src="/__/firebase/9.9.0/firebase-firestore-compat.js"></script>
+    <script defer src="/__/firebase/9.9.0/firebase-functions-compat.js"></script>
+    <script defer src="/__/firebase/9.9.0/firebase-messaging-compat.js"></script>
+    <script defer src="/__/firebase/9.9.0/firebase-storage-compat.js"></script>
+    <script defer src="/__/firebase/9.9.0/firebase-analytics-compat.js"></script>
+    <script defer src="/__/firebase/9.9.0/firebase-remote-config-compat.js"></script>
+    <script defer src="/__/firebase/9.9.0/firebase-performance-compat.js"></script>
+    <!-- 
+    initialize the SDK after all desired features are loaded, set useEmulator to false
+    to avoid connecting the SDK to running emulators.
+  -->
+    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+  </head>
+  <body style="font-family: 'Poppins'">
+    <div class="fixed-top">
+      <!-- start navbar 1 -->
+      <div style="height: 50px; background-color: #2657a7; align-items: center; display: flex">
+        <div class="container">
+          <div class="row justify-content-between">
+            <div class="col-6 fs-6 text-white">
+              <i class="fa-solid fa-phone text-white" style="margin-right: 4px"></i> 022-727-5630
+              <a href="mailto:informasi@lldikti4.or.id" style="text-decoration: none" class="text-white"><i class="fa-solid fa-envelope text-white" style="margin-right: 4px; margin-left: 16px"></i> informasi@lldikti4.or.id </a>
+              <a href="https://api.whatsapp.com/send/?phone=%2B6282244121226&text=Hallo!%20Selamat%20Datang%20Di%20LLDIKTI%20Wilayah4" class="text-white" style="text-decoration: none"
+                ><i class="fa-brands fa-whatsapp text-white" style="margin-right: 4px; margin-left: 16px"></i> Whatsapp</a
+              >
+            </div>
+            <div class="col-2 text-white text-end">
+              <a href="https://twitter.com/lldiktiwilayah4?s=09" class="text-white"><i class="fa-brands fa-twitter" style="margin-right: 10px"></i></a>
+              <a href="https://www.instagram.com/lldiktiwilayah4/?utm_medium=copy_link" class="text-white"><i class="fa-brands fa-instagram" style="margin-right: 10px"></i></a>
+              <a href="https://m.facebook.com/LLDIKTIWILAYAH4/?tsid=0.24115179413463506&source=result" class="text-white"><i class="fa-brands fa-facebook-f" style="margin-right: 10px"></i></a>
+              <a href="https://www.youtube.com/c/LLDIKTIWILAYAH4" class="text-white"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end navbar 1 -->
+      <!-- start navbar 2 -->
+      <div class="shadow" style="height: 100px; background-color: #fff; align-items: center; display: flex">
+        <div class="container">
+          <div class="row justify-content-between">
+            <div class="col-4">
+              <a href="index.html" style="text-decoration: none"><img src="https://i0.wp.com/www.lldikti4.id/wp-content/uploads/2021/09/LLDIKTI-LOGOrev1-1.png?resize=300%2C56&ssl=1" alt="lldikti logo" /></a>
+            </div>
+            <div class="col-8">
+              <nav class="navbar navbar-expand-lg navbar-light">
+                <div class="container-fluid">
+                  <ul class="navbar-nav">
+                    <li class="nav-item">
+                      <a class="nav-link" href="#" data-bs-toggle="dropdown">Profil</a>
+                      <ul class="dropdown-menu shadow" style="border-radius: 16px; border: none">
+                        <li><a class="dropdown-item" href="profil-lldikti-wilayah-4.html">Profil LLDIKTI 4</a></li>
+                        <li><a class="dropdown-item" href="profil-kepala-lldikti-wilayah-4.html" style="text-decoration: none">Profil Kepala LLDIKTI 4</a></li>
+                      </ul>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="info.html">Info</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="akuntabilitas.html">Akuntabilitas</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="berita.html">Berita</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#" data-bs-toggle="dropdown">Layanan</a>
+                      <ul class="dropdown-menu shadow" style="border-radius: 16px; border: none">
+                        <li><a class="dropdown-item" href="#">Layanan Online</a></li>
+                        <li><a class="dropdown-item" href="#">Layanan Kami</a></li>
+                        <li><a class="dropdown-item" href="#">Cara Pengajuan Layanan</a></li>
+                      </ul>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#" data-bs-toggle="dropdown">Informasi Publik</a>
+                      <ul class="dropdown-menu shadow" style="border-radius: 16px; border: none">
+                        <li><a class="dropdown-item" href="#">Standar Pelayanan Publik</a></li>
+                        <li>
+                          <a class="dropdown-item" href="#" data-bs-toggle="dropdown">Produk Hukum</a>
+                          <ul class="dropdown-menu shadow" x-placement="right-start" style="border-radius: 16px; border: none; position: absolute; transform: translate3d(111px, 0px, 0px); top: 0px; left: 0px; will-change: transform">
+                            <li><a class="dropdown-item" href="#">Layanan Online</a></li>
+                            <li><a class="dropdown-item" href="#">Layanan Kami</a></li>
+                            <li><a class="dropdown-item" href="#">Cara Pengajuan Layanan</a></li>
+                          </ul>
+                        </li>
+                        <li><a class="dropdown-item" href="#">PPID</a></li>
+                        <li><a class="dropdown-item" href="#">Prosedur Oprasional Standar</a></li>
+                        <li><a class="dropdown-item" href="#">Peta Proses Bisnis LLDIKTI Wilayah IV</a></li>
+                        <li><a class="dropdown-item" href="#">Buku Panduan / Pedoman</a></li>
+                        <li><a class="dropdown-item" href="#">Materi Kegiatan</a></li>
+                        <li><a class="dropdown-item" href="#">Buletin LLDIKTI Wilayah IV</a></li>
+                        <li><a class="dropdown-item" href="#">Buku Direktori PTS LLDIKTI IV</a></li>
+                        <li><a class="dropdown-item" href="#">Buku Statistik Perguruan Tinggi</a></li>
+                        <li><a class="dropdown-item" href="#">Agenda Kegiatan</a></li>
+                        <li><a class="dropdown-item" href="#">Galeri</a></li>
+                      </ul>
+                    </li>
+                    <li class="nav-item">
+                      <a style="margin-right: 16px" class="nav-link" href=""><i class="fa-solid fa-magnifying-glass"></i></a>
+                    </li>
+                    <li class="nav-item">
+                      <button style="background-color: #2657a7; border-radius: 50px; width: 200px" type="button" class="nav-link btn text-white">Kontak & Pengaduan</button>
+                    </li>
+                  </ul>
+                </div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end navbar 2 -->
+    </div>
+
+    <div class="content-body" style="height: 150px; margin-top: 150px; background-color: #dfe7fd">
+      <div class="container">
+        <div class="row text-center">
+          <p style="font-size: 20pt">LEMBAGA LAYANAN PENDIDIKAN TINGGI <b>WILAYAH 4</b></p>
+          <h1>PROFIL</h1>
+        </div>
+      </div>
+    </div>
+    <!-- content 1 -->
+    <div class="content-body" style="margin-top: 50px; background-color: #fff">
+      <div class="container">
+        <div class="row">
+          <div style="color: #2657a7">
+            <p><b>Sambutan</b></p>
+          </div>
+          <div class="row">
+            <div class="col-3" style="font-size: 18.72pt; font-weight: bold">LLDIKTI Wilayah IV</div>
+            <div class="col-9"><hr style="border: 2px solid" /></div>
+          </div>
+          <div style="color: #adb5bd; text-align: justify; margin-top: 20px">
+            <p>
+              Kami ucapkan selamat datang di website LLDIKTI Wilayah IV Jawa Barat dan Banten, dalam rangka meningkatkan kualitas pelayanan publik dan pemanfaatan teknologi internet di LLDIKTI Wilayah IV agar menjadi efektif, efisien,
+              transparan dan akuntabel kepada masyarakat, Alhamdulillah website LLDIKTI Wilayah IV kini dapat menghadirkan dan menyajikan sumber informasi online sebagai sarana unutk menyampaikan informasi terkini yang dapat diakses
+              langsung oleh masyarakat luas.
+            </p>
+            <p>
+              Dalam mengakomodir aspirasi masyarakat untuk memperoleh informasi yang dapat diandalkan, terpercaya, mudah didapat, dan tersaji secara interaktif, keberadaan internet ini merupakan sarana untuk lebih mempermudah dan
+              mempercepat komunikasi kami dengan 489 Perguruan Tinggi Swasta (PTS ) yang tersebar di wilayah Jawa Barat dan Banten khususnya dan juga dengan masyarakat pada umumnya.
+            </p>
+            <p>
+              Secara struktural LLDIKTI Wilayah IV Jawa Barat dan Banten merupakan unit pelaksana teknis Direktorat Jenderal Pendidikan Tinggi yang melaksanakan tugas Pembinaan, Pengendalian, dan Pengawasan (BINDALWAS) kepada PTS
+              berdasarkan Peraturan Menteri Pendidikan dan Kebudayaan RI Nomor 1 Tahun 2013 tentang Organisasi dan Tata Kerja Koordinasi Perguruan Tinggi Swasta, dan saat ini berubah bentuk menjadi Lembaga Layanan Pendidikan Tinggi
+              (LLDIKTI) berdasarkan Pemenristekdikti no.15 tahun 2018. LLDIKTI berfungsi membantu meningkatkan mutu penyelenggaraan Pendidikan Tinggi.
+            </p>
+            <p>
+              Indikator mutu penyelenggaraan pendidikan merupakan satuan kerja pemerintah yang berfungsi membantu meningkatkan mutu penyelenggaraan Pendidikan Tinggi. Indikator mutu penyelenggaraan pendidikan tinggi yaitu terlampauinya
+              Standard Nasional Pendidikan Tinggi yang dilaksanakan oleh setiap perguruan tinggi swasta.
+            </p>
+            <p>
+              Salah satu kewajiban yang harus dipenuhi oleh perguruan tinggi adalah menyampaikan data dan informasi penyelenggaraan perguruan tinggi setiap akhir semester yang dapat di input langsung melalui aplikasi Feeder Online Pangkalan
+              Data Pendidikan Tinggi (PDDIKTI) yang menjadi dasar dan sumber informasi perguruan tinggi secara nasional.
+            </p>
+            <p>
+              Website ini disediakan sebagai sarana edukasi, publikasi dan informasi kegiatan LLDIKTI Wilayah IV yang terkait dengan BINDALWAS, oleh karena itu, kami berharap agar semua stakeholders dapat memanfaatkan fasilitas yang kami
+              sediakan untuk kemajuan dunia pendidikan tinggi di wilayah Jawa Barat dan Banten.
+            </p>
+            <p>
+              Kami menyadari bahwa website LLDIKTI Wilayah IV masih banyak kekurangan, oleh karena itu masukan dan saran dapat disampaikan untuk peningkatan kualitas website maupun contents yang perlu ditampilan. Akhirnya kami mengucapkan
+              terima kasih kepada semua pihak yang terlibat atas partisipasi yang telah di berikan.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- content 2 -->
+    <div class="content-body" style="margin-top: 50px; background-color: #fff">
+      <div class="container">
+        <div class="row">
+          <div style="color: #2657a7">
+            <p><b>Layanan LLDIKTI 4</b></p>
+          </div>
+          <div class="row">
+            <div class="col-2" style="font-size: 18.72pt; font-weight: bold">Sejarah Kami</div>
+            <div class="col-10"><hr style="border: 2px solid" /></div>
+          </div>
+          <div class="container-fluid ps-4 pe-4" style="margin-top: 20px">
+            <!-- Picture -->
+            <div class="row">
+              <div class="col-xl-4 col-xxl-4 col-sm-8">
+                <!-- P1 -->
+                <div class="card-body">
+                  <img src="https://i0.wp.com/www.lldikti4.id/wp-content/uploads/2021/09/4X4A5967-scaled.jpg?resize=1024%2C683&ssl=1" alt="" srcset="" style="border-radius: 26px; max-width: 100%; height: auto" />
+                </div>
+              </div>
+              <div class="col-xl-4 col-xxl-4 col-sm-8">
+                <!-- P2 -->
+                <div class="card-body">
+                  <img src="https://i0.wp.com/www.lldikti4.id/wp-content/uploads/2021/09/WhatsApp-Image-2019-12-02-at-7.34.30-PM.jpeg?resize=1024%2C682&ssl=1" alt="" srcset="" style="border-radius: 26px; max-width: 100%; height: auto" />
+                </div>
+              </div>
+              <div class="col-xl-4 col-xxl-4 col-sm-8">
+                <!-- P3-->
+                <div class="card-body">
+                  <img src="https://i0.wp.com/www.lldikti4.id/wp-content/uploads/2021/09/WhatsApp-Image-2019-11-29-at-10.38.37-AM1.jpeg?resize=1024%2C682&ssl=1" alt="" srcset="" style="border-radius: 26px; max-width: 100%; height: auto" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div style="color: #adb5bd; margin-top: 20px; text-align: justify">
+            <p>
+              Sejarah perkembangan Kopertis dimulai dengan terbitnya Surat Keputusan Menteri Pendidikan dan Kebudayaan Republik Indonesia Nomor 1/PK/1968 tanggal 17 Februari 1968. Berdasarkan keputusan tersebut dibentuk
+              <b>Koordinator Perguruan Tinggi (KOPERTI)</b> yang mempunyai fungsi sebagai aparatur konsultatif dengan Kepala Kantor Perwakilan Pendidikan dan Kebudayaan setempat. Sehubungan dengan makin bertambahnya pendirian perguruan
+              tinggi terutama Perguruan Tinggi Swasta, maka Menteri Pendidikan dan Kebudayaan mengeluarkan Surat Keputusan Nomor 079/O/1975 tanggal 17 April 1975 yang membatasi ruang lingkup kerja Koordinator Perguruan Tinggi, khususnya
+              untuk memberikan pelayanan kepada Perguruan Tinggi Swasta maka Koordinator Perguruan Tinggi (KOPERTI) di rubah menjadi <b>Koordinator Perguruan Tinggi Swasta (KOPERTIS)</b>.
+            </p>
+            <p>
+              Dalam rangka penyesuaian dengan perkembangan di bidang pengelolaan Perguruan Tinggi Swasta, Menteri Pendidikan dan Kebudayaan menerbitkan Surat Keputusan <b>No. 062/O/1982 dan No. 0135/O/1990</b> tanggal 15 Maret 1990, tentang
+              Organisasi dan Tata Kerja Koordinator Perguruan Tinggi Swasta yang didalamnya selain mengatur susunan organisasi dan tata kerja Kopertis juga merubah Wilayah kerja menjadi 12 Wilayah terdiri dari
+              <b>KOPERTIS Wilayah I</b> Medan, <b>KOPERTIS Wilayah II</b> Palembang, <b>KOPERTIS Wilayah III</b> Jakarta, <b>KOPERTIS Wilayah IV</b> Bandung, <b>KOPERTIS Wilayah V</b> Yogyakarta, <b>KOPERTIS Wilayah VI</b> Semarang,
+              <b>KOPERTIS Wilayah VII</b> Surabaya, <b>KOPERTIS Wilayah VIII</b> Bali, <b>KOPERTIS Wilayah IX</b> Ujung Pandang, <b>KOPERTIS Wilayah X</b> Padang, <b>KOPERTIS Wilayah XI</b> Banjarmasin, dan
+              <b>KOPERTIS Wilayah XII</b> Ambon.
+            </p>
+            <p>
+              Dengan semakin berkembangnya Perguruan Tinggi Swasta, Kementerian Pendidikan dan Kebudayaan mengeluarkan <b>Peraturan Menteri Pendidikan dan Kebudayaan Republik Indonesia No. 1 tahun 2013 jo No. 42 tahun 2013</b>. Organisasi
+              dan Tata Kerja Kopertis kembali merubah wilayah kerja menjadi 14 Wilayah dengan bertambahnya <b>Kopertis Wilayah XIII Aceh dan Kopertis Wilayah XIV Papua</b>. Dengan adanya peraturan ini juga beberapa bagian ada yang berubah
+              nama sekaligus merubah uraian tugas bagian tersebut karena sudah tidak sesuai dengan perkembangan pendidikan tinggi sekarang.
+            </p>
+            <p>
+              Sesuai peraturan Meteri Riset, Teknologi, dan Pendidikan Tinggi Republik Indonesia nomor 15 tahun 2018 tentang Organisasi dan Tata Kerja Lembaga Layanan Pendidikan Tinggi, maka tahun 2018 Kopertis berubah nama menjadi LLDIKTI
+              yang dipimpin oleh seorang Kepala. LLDIKTI berada di bawah dan bertanggung jawab kepada Menteri Riset, Teknologi, dan Pendidikan Tinggi.
+            </p>
+            <div style="text-align: center; max-width: 100%; height: auto">
+              <img src="https://i0.wp.com/www.lldikti4.id/wp-content/uploads/elementor/thumbs/prfil-1-pf33lthgz9i1zqu8yue36rd94usodic3c2yz3asui4.png?w=800&ssl=1" alt="" srcset="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- content 3 -->
+    <div class="content-body" style="margin-top: 50px; background-color: #fff">
+      <div class="container">
+        <div class="row">
+          <div class="row">
+            <div class="col-3" style="font-size: 18.72pt; font-weight: bold">Fungsi Dan Tugas</div>
+            <div class="col-9"><hr style="border: 2px solid" /></div>
+          </div>
+          <div style="color: #adb5bd; text-align: justify; margin-top: 20px">
+            <p>
+              Sebagaimana Peraturan Menteri Pendidikan dan Kebudayaan nomor 1 tahun 2013 jo nomor 42 tahun 2013 tentang Organisasi dan Tata Kerja (OTK) Kopertis. Kopertis mempunyai tugas merumuskan kebijakan dan melaksanakan pengawasan,
+              pengendalian, dan pembinaan perguruan tinggi swasta di wilayah kerjanya berdasarkan kebijakan Direktur Jenderal Pendidikan Tinggi. Sesuai dengan OTK tersebut dalam melaksanakan tugas Kopertis menyelenggarakan fungsi :
+            </p>
+          </div>
+          <!-- tabs -->
+          <div class="container mt-2">
+            <!-- tabs link -->
+            <ul class="nav nav-tabs">
+              <li class="nav-item">
+                <a class="nav-link active" data-bs-toggle="tab" href="#Fungsi">Fungsi</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" href="#Tugas">Tugas</a>
+              </li>
+            </ul>
+            <!-- tabs content -->
+            <div class="tab-content">
+              <div class="tab-pane active" id="Fungsi">
+                <div class="row border g-0 rounded shadow-sm">
+                  <div class="col p-4">
+                    <p>Isinya nanti Fungsi</p>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane" id="Tugas">
+                <div class="row border g-0 rounded shadow-sm">
+                  <div class="col p-4">
+                    <p>Isinya nanti Tugas</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- content 4 -->
+    <div class="content-body" style="margin-top: 50px; background-color: #fff">
+      <div class="container">
+        <div class="row">
+          <div class="row">
+            <div class="col-3" style="font-size: 18.72pt; font-weight: bold">Struktur Organisasi</div>
+            <div class="col-9"><hr style="border: 2px solid" /></div>
+          </div>
+          <div style="color: #adb5bd; text-align: center; margin-top: 20px">
+            <div style="max-width: 100%; height: auto">
+              <img src="https://i0.wp.com/www.lldikti4.id/wp-content/uploads/2022/05/STRUKTUR-ORGANISASI-Permendikbud1.drawio.png?resize=768%2C538&ssl=1" alt="" />
+              <img src="https://i0.wp.com/www.lldikti4.id/wp-content/uploads/2022/05/STRUKTUR-ORGANISASI-Upaya-Percepatan1.drawio.png?resize=869%2C1536&ssl=1" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- footer -->
+    <div class="card-footer text-center text-white" style="height: 50px; margin-top: 300px; background-color: black">
+      <footer>
+        <div class="container">
+          <div class="row justify-content-between">
+            <p>Copyright @2021 Lembaga Layanan Pendidikan Tinggi (LLDIKTI) Wilayah IV Jawa Barat dan Banten Jl. Phh Mustopa No.38 Bandung</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <!-- bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/3a61d8c882.js" crossorigin="anonymous"></script>
+
+    <!-- feather icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <!-- custom js -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // make it as accordion for smaller screens
+        if (window.innerWidth > 992) {
+          document.querySelectorAll(".navbar .nav-item").forEach(function (everyitem) {
+            everyitem.addEventListener("mouseover", function (e) {
+              let el_link = this.querySelector("a[data-bs-toggle]");
+
+              if (el_link != null) {
+                let nextEl = el_link.nextElementSibling;
+                el_link.classList.add("show");
+                nextEl.classList.add("show");
+              }
+            });
+            everyitem.addEventListener("mouseleave", function (e) {
+              let el_link = this.querySelector("a[data-bs-toggle]");
+
+              if (el_link != null) {
+                let nextEl = el_link.nextElementSibling;
+                el_link.classList.remove("show");
+                nextEl.classList.remove("show");
+              }
+            });
+          });
+          document.querySelectorAll(".navbar .dropdown-item").forEach(function (everyitem) {
+            everyitem.addEventListener("mouseover", function (e) {
+              let el_link = this.querySelector("a[data-bs-toggle]");
+
+              if (el_link != null) {
+                let nextEl = el_link.nextElementSibling;
+                el_link.classList.add("show");
+                nextEl.classList.add("show");
+              }
+            });
+            everyitem.addEventListener("mouseleave", function (e) {
+              let el_link = this.querySelector("a[data-bs-toggle]");
+
+              if (el_link != null) {
+                let nextEl = el_link.nextElementSibling;
+                el_link.classList.remove("show");
+                nextEl.classList.remove("show");
+              }
+            });
+          });
+        }
+        // end if innerWidth
+      });
+    </script>
+  </body>
+</html>
